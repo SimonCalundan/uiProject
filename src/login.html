@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log ind eller registrer</title>
+
+    <link rel="stylesheet" href="./login.css">
+
+    <script src="https://kit.fontawesome.com/6caf760fb1.js" crossorigin="anonymous"></script>
+    <script src="./login.js" type="module"></script>
+    <link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon">
+
+</head>
+
+<body>
+    <nav>
+        <div>
+            <i class="nav__menuIcon fa-sharp fa-solid fa-bars"></i>
+        </div>
+        <div>
+            <a href="./forside.html">
+                <img src="../assets/logo.png" class="nav__logo" alt="Logo">
+            </a>
+        </div>
+        <div>
+            <i class="nav__menuIcon fa-regular fa-user"></i>
+            <i class="nav__menuIcon fa-solid fa-cart-shopping"></i>
+        </div>
+    </nav>
+
+    <main class="mainContainer">
+        <aside class="main__avatar">
+            <img src="../assets/maskot_registrer.svg" alt="glad maskot">
+        </aside>
+
+        <!-- login section -->
+        <section class="main__contentContainer activeContainer" data-login-section-container>
+            <article class="main__contentContainer--ctaButtons">
+                <h2 class="activeButtonLeft">Log ind</h2>
+                <h2 class="" data-go-to-register-button>Registrer</h2>
+            </article>
+
+            <article class="main__contentContainer--inputs">
+                <form data-user-form-login>
+                    <input type="email" placeholder="E-mail" data-user-email-login required>
+                    <input type="password" minlength="6" placeholder="Adganskode" data-user-password-login required>
+
+                    <button type="submit">Log ind</button>
+                </form>
+            </article>
+
+            <article class="main__contentContainer--forgotPassword">
+                <h2>Har du glemt din adganskode?</h2>
+                <p>Få tilsendt en mail med instruktioner...</p>
+                <form data-user-form-forgot-password>
+                    <input type="email" placeholder="E-mail" data-user-forgot-password-email required>
+
+                    <button type="submit">Send email</button>
+                </form>
+            </article>
+        </section>
+
+        <!-- register section -->
+        <section class="main__contentContainer" data-register-section-container>
+            <article class="main__contentContainer--ctaButtons">
+                <h2 class="" data-go-to-login-button>Log ind</h2>
+                <h2 class="activeButtonRight">Registrer</h2>
+            </article>
+
+            <article class="main__contentContainer--inputs">
+                <form data-user-form-register>
+                    <input type="email" placeholder="E-mail" data-user-email-register required>
+                    <input type="password" minlength="6" placeholder="Adganskode" data-user-password-register required>
+                    <p>Koden skal være minimum seks (6) karakterer lang</p>
+                    <input type="password" minlength="6" placeholder="Bekræft kode" data-user-password-confirm-register
+                        required>
+
+                    <div class="main__contentContainer--checkboxContainer">
+                        <input type="checkbox">
+                        <p>Jeg vil gerne modtage mails om nyheder og spændende tilbud</p>
+                    </div>
+                    <div class="main__contentContainer--checkboxContainer">
+                        <input type="checkbox" required>
+                        <p>Jeg accepterer betingelser og rettigheder</p>
+                    </div>
+
+                    <button type="submit">Registrer</button>
+                </form>
+            </article>
+        </section>
+
+
+
+    </main>
+
+
+
+</body>
+
+</html>

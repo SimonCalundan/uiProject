@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./forside.css">
+    <title>Forside | Nippon</title>
+
+    <!-- Link til ikoner -->
+    <script src="https://kit.fontawesome.com/6caf760fb1.js" crossorigin="anonymous"></script>
+
+    <!-- Link til Montserrat font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon">
+
+    <script src="./forside.js"></script>
+</head>
+
+
+<body class="body_forside" id="body_forside">
+
+    <!------------------------------------------------------------------------
+    HEADER
+    ------------------------------------------------------------------------->
+    <header>
+
+        <nav class="nav_forside">
+            <!-- Burgermenu ikon -->
+            <i onclick="showMenu()" class="fa-solid fa-bars"></i>
+
+            <!-- Logo -->
+            <a href="./forside.html" class="logo"><img src="../assets/logo.png" alt="Nippon logo" class="logo"></a>
+
+            <!-- Profil & kurv -->
+            <div class="nav_ikoner">
+                <a href="./login.html" class="ikon_link"><i class="fa-solid fa-circle-user"></i></a>
+                <a href="./checkud.html" class="ikon_link"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </nav>
+
+        <!-- Bannerbillede -->
+        <img src="../assets/BannerbilledeFix_1.png"
+            alt="Lyserøde kirsebærblomster, en papkasse og en japansk madret på sort baggrund." class="banner_img">
+
+    </header>
+
+
+    <!------------------------------------------------------------------------
+    SECTIONS 
+    ------------------------------------------------------------------------->
+
+    <!-- Knapper -->
+    <section class="section_knapper">
+        <a href="./retter.html" class="button_forside button_lavdinegen">Lav din egen måltidskasse</a>
+        <p class="p_eller">eller</p>
+        <a href="#" class="button_forside button_sevores">Se vores færdige måltidskasser</a>
+    </section>
+
+    <!-- Studierabat -->
+    <section id="section_rabat">
+        <p class="p_rabat">Hos Nippon får studerende 10% rabat!</p>
+    </section>
+
+    <!-- Trustpilot -->
+    <section class="section_trustpilot">
+        <a href="https://dk.trustpilot.com/" class="trustpilot_link">
+            <img src="../assets/trustpilot.png" alt="Trustpilot-anmeldelser" class="trustpilot_img">
+        </a>
+    </section>
+
+
+    <!------------------------------------------------------------------------
+    BURGERMENU
+    ------------------------------------------------------------------------->
+
+    <!-- Backdrop (mørk baggrund, når menuen åbnes) -->
+    <div onclick="closeMenu()" class="backdrop" id="backdrop"></div>
+
+    <!-- Burgermenu indhold -->
+    <div class="menu" id="menu">
+
+        <!-- Kryds i menuen -->
+        <i onclick="closeMenu()" class="fa-solid fa-xmark closeButton"></i>
+
+        <!-- Lav din egen måltidskasse -->
+        <a href="./retter.html" class="menu_link">
+            <h1 class="menu_overkat">Lav din egen måltidskasse</h1>
+        </a>
+
+        <!-- Måltidskasser -->
+        <a href="#" class="menu_link">
+            <h1 class="menu_overkat">Måltidskasser</h1>
+        </a>
+        <a href="#" class="menu_link">
+            <p class="menu_underkat">Nemt og hurtigt</p>
+        </a>
+        <a href="#" class="menu_link">
+            <p class="menu_underkat">Sundt</p>
+        </a>
+        <a href="#" class="menu_link">
+            <p class="menu_underkat">Vegansk</p>
+        </a>
+        <a href="#" class="menu_link">
+            <p class="menu_underkat">Proteinrig</p>
+        </a>
+        <a href="#" class="menu_link">
+            <p class="menu_underkat">Økologisk</p>
+        </a>
+        <a href="#" class="menu_link">
+            <p class="menu_underkat">Børnevenlig</p>
+        </a>
+
+        <!-- Sådan fungerer det -->
+        <a href="#" class="menu_link">
+            <h1 class="menu_overkat">Sådan fungerer det</h1>
+        </a>
+        <a href="#" class="menu_link">
+            <p class="menu_underkat">Tips og tricks</p>
+        </a>
+        <a href="#" class="menu_link">
+            <p class="menu_underkat">Levering</p>
+        </a>
+        <a href="#" class="menu_link">
+            <p class="menu_underkat">Bæredygtighed</p>
+        </a>
+
+        <!-- Hjælp -->
+        <a href="#" class="menu_link">
+            <h1 class="menu_overkat">Hjælp</h1>
+        </a>
+        <a href="#" class="menu_link">
+            <p class="menu_underkat">Kontakt</p>
+        </a>
+
+        <!-- Log ind -->
+        <a href="#" class="menu_link">
+            <h1 class="menu_overkat">Log ind</h1>
+        </a>
+
+        <hr>
+
+        <!-- Sociale medier -->
+        <div class="menu_some">
+            <a href="https://www.facebook.com/" class="some_link"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.tiktok.com/" class="some_link"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://www.instagram.com/" class="some_link"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.youtube.com/" class="some_link"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+
+
+
+    </div>
+
+</body>
+
+</html>

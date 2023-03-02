@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  background-color: #2e2e2e;
+  color: #f2f2f2;
+}
+
+button {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+}
+
+.alleretter {
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+.pris {
+  position: absolute;
+  top: 28px;
+  left: 0;
+  background-color: #aecba1;
+  color: #2e2e2e;
+  text-align: center;
+  font-size: 1rem;
+  padding-inline: 10px;
+}
+
+.cards {
+  /* display: flex;
+      flex-wrap: wrap; */
+  padding-left: 3px;
+  max-width: 100vw;
+  justify-content: center;
+  gap: 16px;
+}
+
+.filterDiv {
+  background-color: #f2f2f2;
+  color: #2e2e2e;
+  text-align: left;
+  margin: 2px;
+  display: none; /* Hidden by default */
+  position: relative;
+}
+
+.baggrund {
+  background-color: #f2f2f2;
+  border-radius: 100%;
+  padding: 3px;
+  border: 0.5px solid black;
+}
+
+.bestik {
+  color: rgb(106, 104, 104);
+}
+
+.gullerod {
+  color: rgb(254, 168, 9);
+}
+
+.vagt {
+  color: black;
+}
+
+.ur {
+  color: rgb(247, 214, 0);
+}
+
+.globus {
+  color: green;
+}
+
+.blad {
+  color: rgb(103, 200, 6);
+}
+
+.barn {
+  color: rgb(32, 13, 207);
+  width: 20px;
+}
+
+.show {
+  display: block;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  padding: 4px 13px;
+  border-radius: 50px;
+  margin-top: 5px;
+  background-color: #e1cdd3;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #b30000;
+  color: white;
+}
+
+.myBtnContainer {
+  overflow-x: scroll;
+}
+
+/* cards */
+
+.card {
+  padding: 10px;
+  padding-bottom: 20px;
+}
+
+.tekstbokse {
+  background-color: #e7e7e7;
+  display: flex;
+  font-size: 10px;
+  padding: 4px 4px;
+}
+
+.billede {
+  border: 1px solid black;
+}
+
+/* ur ikon */
+.fa-clock {
+  display: block;
+  padding-left: 2px;
+  padding-right: 5px;
+}
+
+/* skala ikon*/
+.fa-cloudscale {
+  display: block;
+  padding-left: 2px;
+  padding-right: 5px;
+}
+
+.cardtitel {
+  padding-top: 15px;
+  padding-bottom: 20px;
+}
+
+/* info ikon */
+.fa-circle-info {
+  size: 4px;
+  font-size: 30px;
+  padding-right: 140px;
+}
+
+/* plus ikon */
+.fa-plus {
+  size: 4px;
+  font-size: 30px;
+}
+
+.info__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cards__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  gap: 8px;
+}

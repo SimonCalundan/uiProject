@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nippon filter</title>
+    <script type="text/javascript" src="./retter.js"></script>
+    <link rel="stylesheet" href="./retter.css">
+    <link rel="stylesheet" href="../dist/output.css">
+
+    <!-- iconer fra https://fontawesome.com -->
+    <script src="https://kit.fontawesome.com/6caf760fb1.js" crossorigin="anonymous"></script>
+
+    <!-- fonts.google.com -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Permanent+Marker&display=swap');
+    </style>
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class=" flex w-screen bg-[#2E2E2E] items-center justify-between px-2 py-2">
+        <i class="fa-solid fa-bars text-5xl text-white"></i>
+        <a href="./forside.html">
+            <img class="w-52 ml-5" src="../assets/logo.png" alt="">
+        </a>
+        <div class=" flex items-center text-white space-x-2">
+
+            <a href="./login.html">
+                <img class=" w-11 invert " src="../assets/profile.svg" alt="">
+            </a>
+            <a href="./checkud.html">
+
+                <i class="fa-solid fa-cart-shopping text-3xl"></i>
+
+            </a>
+        </div>
+    </div>
+
+
+
+    <h1> Lav din egen måltidskasse</h1>
+
+    <!-- Kategorier -->
+    <div id="myBtnContainer">
+        <button class="btn" onclick="filterSelection('Alle')"> <i class="fa-solid fa-utensils bestik baggrund"></i> Alle
+        </button>
+        <button class="btn" onclick="filterSelection('Sundt')"> <i class="fa-solid fa-carrot gullerod baggrund"></i>
+            Sundt</button>
+        <button class="btn" onclick="filterSelection('Nemtoghurtigt')"> <i
+                class="fa-sharp fa-solid fa-clock ur baggrund"></i> Nemt og hurtigt</button>
+        <button class="btn" onclick="filterSelection('Vegansk')"> <i
+                class="fa-solid fa-earth-africa globus baggrund"></i> Vegansk</button>
+        <button class="btn" onclick="filterSelection('Proteinrig')"> <i class="fa-solid fa-dumbbell vagt baggrund"></i>
+            Proteinrig</button>
+        <button class="btn" onclick="filterSelection('Oekologisk')"> <i class="fa-solid fa-leaf blad baggrund"></i>
+            Økologisk</button>
+        <button class="btn" onclick="filterSelection('Boernevenlig')"> <i
+                class="fa-solid fa-child-reaching barn baggrund"></i> Børnevenlig</button>
+    </div>
+
+    <h2 class="alleretter"> Lav din egen måltidskasse</h2>
+
+
+    <!-- cards Alle -->
+    <div class="cards__wrapper">
+        <div class="filterDiv Alle card">
+            <img src="../assets/mad_4.png" class="billede" alt="Billede af madret">
+            <div class="pris">
+                34 kr.
+            </div>
+
+            <div class="info__wrapper">
+                <div class="tekstbokse tektsboks1">
+                    <i class="fa-sharp fa-regular fa-clock"></i>
+                    20-30 min
+                </div>
+
+                <div class="tekstbokse">
+                    <i class="fa-brands fa-cloudscale"></i>
+                    Sværhedsgrad 2/5
+                </div>
+            </div>
+            <h4 class="cardtitel"> Maki sushi med avokado</h4>
+            <i class="fa-solid fa-circle-info"> </i>
+            <i class="fa-solid fa-plus"></i>
+        </div>
+
+
+        <div class="filterDiv Alle card">
+            <img src="../assets/mad_1.png" class="billede" alt="Billede af madret">
+            <div class="pris">
+                32 kr.
+            </div>
+
+            <div class="info__wrapper">
+                <div class="tekstbokse tektsboks1">
+                    <i class="fa-sharp fa-regular fa-clock"></i>
+                    30-40 min
+                </div>
+
+                <div class="tekstbokse">
+                    <i class="fa-brands fa-cloudscale"></i>
+                    Sværhedsgrad 3/5
+                </div>
+            </div>
+            <h4 class="cardtitel"> Ramen med spicy rejer</h4>
+            <i class="fa-solid fa-circle-info"> </i>
+            <i class="fa-solid fa-plus"></i>
+        </div>
+
+
+        <div class="cards">
+            <div class="filterDiv Alle card">
+                <img src="../assets/mad_2.png" class="billede" alt="Billede af madret">
+                <div class="pris">
+                    57 kr.
+                </div>
+
+                <div class="info__wrapper">
+                    <div class="tekstbokse tektsboks1">
+                        <i class="fa-sharp fa-regular fa-clock"></i>
+                        10-20 min
+                    </div>
+
+                    <div class="tekstbokse">
+                        <i class="fa-brands fa-cloudscale"></i>
+                        Sværhedsgrad 1/5
+                    </div>
+                </div>
+                <h4 class="cardtitel"> Misosuppe med tofu</h4>
+                <i class="fa-solid fa-circle-info"> </i>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="filterDiv Alle card">
+                <img src="../assets/mad_8.png" class="billede" alt="Billede af madret">
+                <div class="pris">
+                    48 kr.
+                </div>
+
+                <div class="info__wrapper">
+                    <div class="tekstbokse tektsboks1">
+                        <i class="fa-sharp fa-regular fa-clock"></i>
+                        30-40 min
+                    </div>
+
+                    <div class="tekstbokse">
+                        <i class="fa-brands fa-cloudscale"></i>
+                        Sværhedsgrad 3/5
+                    </div>
+                </div>
+                <h4 class="cardtitel"> Sesamkylling i tomat</h4>
+                <i class="fa-solid fa-circle-info"> </i>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+        </div>
+
+
+        <div class="cards">
+            <div class="filterDiv Alle card">
+                <img src="../assets/mad_3.png" class="billede" alt="Billede af madret">
+                <div class="pris">
+                    52 kr.
+                </div>
+
+                <div class="info__wrapper">
+                    <div class="tekstbokse tektsboks1">
+                        <i class="fa-sharp fa-regular fa-clock"></i>
+                        25-30 min
+                    </div>
+
+                    <div class="tekstbokse">
+                        <i class="fa-brands fa-cloudscale"></i>
+                        Sværhedsgrad 3/5
+                    </div>
+                </div>
+                <h4 class="cardtitel"> Stegt okse og nudler</h4>
+                <i class="fa-solid fa-circle-info"> </i>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+        </div>
+
+
+        <div class="cards">
+            <div class="filterDiv Alle card">
+                <img src="../assets/mad_6.png" class="billede" alt="Billede af madret">
+                <div class="pris">
+                    50 kr.
+                </div>
+
+                <div class="info__wrapper">
+                    <div class="tekstbokse tektsboks1">
+                        <i class="fa-sharp fa-regular fa-clock"></i>
+                        30-40 min
+                    </div>
+
+                    <div class="tekstbokse">
+                        <i class="fa-brands fa-cloudscale"></i>
+                        Sværhedsgrad 4/5
+                    </div>
+                </div>
+                <h4 class="cardtitel"> Spicy nudelsuppe</h4>
+                <i class="fa-solid fa-circle-info"> </i>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+        </div>
+
+
+        <div class="cards">
+            <div class="filterDiv Alle card">
+                <img src="../assets/mad_5.png" class="billede" alt="Billede af madret">
+                <div class="pris">
+                    55 kr.
+                </div>
+
+                <div class="info__wrapper">
+                    <div class="tekstbokse tektsboks1">
+                        <i class="fa-sharp fa-regular fa-clock"></i>
+                        20-30 min
+                    </div>
+
+                    <div class="tekstbokse">
+                        <i class="fa-brands fa-cloudscale"></i>
+                        Sværhedsgrad 2/5
+                    </div>
+                </div>
+                <h4 class="cardtitel"> Ramen med spicy rejer</h4>
+                <i class="fa-solid fa-circle-info"> </i>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="filterDiv Alle card">
+                <img src="../assets/mad_7.png" class="billede" alt="Billede af madret">
+                <div class="pris">
+                    40 kr.
+                </div>
+
+                <div class="info__wrapper">
+                    <div class="tekstbokse tektsboks1">
+                        <i class="fa-sharp fa-regular fa-clock"></i>
+                        20-30 min
+                    </div>
+
+                    <div class="tekstbokse">
+                        <i class="fa-brands fa-cloudscale"></i>
+                        Sværhedsgrad 2/5
+                    </div>
+                </div>
+                <h4 class="cardtitel"> Stegt kylling og grønt</h4>
+                <i class="fa-solid fa-circle-info"> </i>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+        </div>
+
+        <!-------- cards Sundt --------->
+
+        <div class="cards">
+            <div class="filterDiv Sundt card">
+                <img src="../assets/mad_5.png" class="billede" alt="Billede af madret">
+                <div class="pris">
+                    55 kr.
+                </div>
+
+                <div class="info__wrapper">
+                    <div class="tekstbokse tektsboks1">
+                        <i class="fa-sharp fa-regular fa-clock"></i>
+                        20-30 min
+                    </div>
+
+                    <div class="tekstbokse">
+                        <i class="fa-brands fa-cloudscale"></i>
+                        Sværhedsgrad 2/5
+                    </div>
+                </div>
+                <h4 class="cardtitel"> Ramen med spicy rejer</h4>
+                <i class="fa-solid fa-circle-info"> </i>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="filterDiv Sundt card">
+                <img src="../assets/mad_2.png" class="billede" alt="Billede af madret">
+                <div class="pris">
+                    57 kr.
+                </div>
+
+                <div class="info__wrapper">
+                    <div class="tekstbokse tektsboks1">
+                        <i class="fa-sharp fa-regular fa-clock"></i>
+                        10-20 min
+                    </div>
+
+                    <div class="tekstbokse">
+                        <i class="fa-brands fa-cloudscale"></i>
+                        Sværhedsgrad 1/5
+                    </div>
+                </div>
+                <h4 class="cardtitel"> Misosuppe med tofu</h4>
+                <i class="fa-solid fa-circle-info"> </i>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="filterDiv Sundt card">
+                <img src="../assets/mad_3.png" class="billede" alt="Billede af madret">
+                <div class="pris">
+                    52 kr.
+                </div>
+
+                <div class="info__wrapper">
+                    <div class="tekstbokse tektsboks1">
+                        <i class="fa-sharp fa-regular fa-clock"></i>
+                        25-30 min
+                    </div>
+
+                    <div class="tekstbokse">
+                        <i class="fa-brands fa-cloudscale"></i>
+                        Sværhedsgrad 3/5
+                    </div>
+                </div>
+                <h4 class="cardtitel"> Stegt okse og nudler</h4>
+                <i class="fa-solid fa-circle-info"> </i>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="filterDiv Sundt card">
+                <img src="../assets/mad_4.png" class="billede" alt="Billede af madret">
+                <div class="pris">
+                    34 kr.
+                </div>
+
+                <div class="info__wrapper">
+                    <div class="tekstbokse tektsboks1">
+                        <i class="fa-sharp fa-regular fa-clock"></i>
+                        20-30 min
+                    </div>
+
+                    <div class="tekstbokse">
+                        <i class="fa-brands fa-cloudscale"></i>
+                        Sværhedsgrad 2/5
+                    </div>
+                </div>
+                <h4 class="cardtitel"> Maki sushi med avokado</h4>
+                <i class="fa-solid fa-circle-info"> </i>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="filterDiv Sundt card">
+                <img src="../assets/mad_6.png" class="billede" alt="Billede af madret">
+                <div class="pris">
+                    50 kr.
+                </div>
+
+                <div class="info__wrapper">
+                    <div class="tekstbokse tektsboks1">
+                        <i class="fa-sharp fa-regular fa-clock"></i>
+                        30-40 min
+                    </div>
+
+                    <div class="tekstbokse">
+                        <i class="fa-brands fa-cloudscale"></i>
+                        Sværhedsgrad 4/5
+                    </div>
+                </div>
+                <h4 class="cardtitel"> Spicy nudelsuppe</h4>
+                <i class="fa-solid fa-circle-info"> </i>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="filterDiv Sundt card">
+                <img src="../assets/mad_8.png" class="billede" alt="Billede af madret">
+                <div class="pris">
+                    48 kr.
+                </div>
+
+                <div class="info__wrapper">
+                    <div class="tekstbokse tektsboks1">
+                        <i class="fa-sharp fa-regular fa-clock"></i>
+                        30-40 min
+                    </div>
+
+                    <div class="tekstbokse">
+                        <i class="fa-brands fa-cloudscale"></i>
+                        Sværhedsgrad 3/5
+                    </div>
+                </div>
+                <h4 class="cardtitel"> Sesamkylling i tomat</h4>
+                <i class="fa-solid fa-circle-info"> </i>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+        </div>
+
+        <!-------- cards nemt og hurtigt --------->
+
+
+        <div class="cards">
+            <div class="filterDiv Nemtoghurtigt card">
+                <img src="../assets/mad_6.png" class="billede" alt="Billede af madret">
+                <div class="pris">
+                    50 kr.
+                </div>
+
+                <div class="info__wrapper">
+                    <div class="tekstbokse tektsboks1">
+                        <i class="fa-sharp fa-regular fa-clock"></i>
+                        30-40 min
+                    </div>
+
+                    <div class="tekstbokse">
+                        <i class="fa-brands fa-cloudscale"></i>
+                        Sværhedsgrad 4/5
+                    </div>
+                </div>
+                <h4 class="cardtitel"> Spicy nudelsuppe</h4>
+                <i class="fa-solid fa-circle-info"> </i>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+        </div>
+
+
+        <div class="cards">
+            <div class="filterDiv Nemtoghurtigt card">
+                <img src="../assets/mad_8.png" class="billede" alt="Billede af madret">
+                <div class="pris">
+                    48 kr.
+                </div>
+
+                <div class="info__wrapper">
+                    <div class="tekstbokse tektsboks1">
+                        <i class="fa-sharp fa-regular fa-clock"></i>
+                        30-40 min
+                    </div>
+
+                    <div class="tekstbokse">
+                        <i class="fa-brands fa-cloudscale"></i>
+                        Sværhedsgrad 3/5
+                    </div>
+                </div>
+                <h4 class="cardtitel"> Sesamkylling i tomat</h4>
+                <i class="fa-solid fa-circle-info"> </i>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="filterDiv Nemtoghurtigt card">
+                <img src="../assets/mad_7.png" class="billede" alt="Billede af madret">
+                <div class="pris">
+                    40 kr.
+                </div>
+
+                <div class="info__wrapper">
+                    <div class="tekstbokse tektsboks1">
+                        <i class="fa-sharp fa-regular fa-clock"></i>
+                        20-30 min
+                    </div>
+
+                    <div class="tekstbokse">
+                        <i class="fa-brands fa-cloudscale"></i>
+                        Sværhedsgrad 2/5
+                    </div>
+                </div>
+                <h4 class="cardtitel"> Stegt kylling og grønt</h4>
+                <i class="fa-solid fa-circle-info"> </i>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="filterDiv Nemtoghurtigt card">
+                <img src="../assets/mad_4.png" class="billede" alt="Billede af madret">
+                <div class="pris">
+                    34 kr.
+                </div>
+
+                <div class="info__wrapper">
+                    <div class="tekstbokse tektsboks1">
+                        <i class="fa-sharp fa-regular fa-clock"></i>
+                        20-30 min
+                    </div>
+
+                    <div class="tekstbokse">
+                        <i class="fa-brands fa-cloudscale"></i>
+                        Sværhedsgrad 2/5
+                    </div>
+                </div>
+                <h4 class="cardtitel"> Maki sushi med avokado</h4>
+                <i class="fa-solid fa-circle-info"> </i>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="filterDiv Nemtoghurtigt card">
+                <img src="../assets/mad_2.png" class="billede" alt="Billede af madret">
+                <div class="pris">
+                    57 kr.
+                </div>
+
+                <div class="info__wrapper">
+                    <div class="tekstbokse tektsboks1">
+                        <i class="fa-sharp fa-regular fa-clock"></i>
+                        10-20 min
+                    </div>
+
+                    <div class="tekstbokse">
+                        <i class="fa-brands fa-cloudscale"></i>
+                        Sværhedsgrad 1/5
+                    </div>
+                </div>
+                <h4 class="cardtitel"> Misosuppe med tofu</h4>
+                <i class="fa-solid fa-circle-info"> </i>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="filterDiv Nemtoghurtigt card">
+                <img src="../assets/mad_3.png" class="billede" alt="Billede af madret">
+                <div class="pris">
+                    52 kr.
+                </div>
+
+                <div class="info__wrapper">
+                    <div class="tekstbokse tektsboks1">
+                        <i class="fa-sharp fa-regular fa-clock"></i>
+                        25-30 min
+                    </div>
+
+                    <div class="tekstbokse">
+                        <i class="fa-brands fa-cloudscale"></i>
+                        Sværhedsgrad 3/5
+                    </div>
+                </div>
+                <h4 class="cardtitel"> Stegt okse og nudler</h4>
+                <i class="fa-solid fa-circle-info"> </i>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+        </div>
+
+
+        <div class="cards">
+            <div class="filterDiv Nemtoghurtigt card">
+                <img src="../assets/mad_5.png" class="billede" alt="Billede af madret">
+                <div class="pris">
+                    55 kr.
+                </div>
+
+                <div class="info__wrapper">
+                    <div class="tekstbokse tektsboks1">
+                        <i class="fa-sharp fa-regular fa-clock"></i>
+                        20-30 min
+                    </div>
+
+                    <div class="tekstbokse">
+                        <i class="fa-brands fa-cloudscale"></i>
+                        Sværhedsgrad 2/5
+                    </div>
+                </div>
+                <h4 class="cardtitel"> Ramen med spicy rejer</h4>
+                <i class="fa-solid fa-circle-info"> </i>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+        </div>
+
+        <!--------Vegansk --------->
+
+        <div class="cards">
+            <div class="filterDiv Vegansk card">
+                <img src="../assets/mad_2.png" class="billede" alt="Billede af madret">
+                <div class="pris">
+                    57 kr.
+                </div>
+
+                <div class="info__wrapper">
+                    <div class="tekstbokse tektsboks1">
+                        <i class="fa-sharp fa-regular fa-clock"></i>
+                        10-20 min
+                    </div>
+
+                    <div class="tekstbokse">
+                        <i class="fa-brands fa-cloudscale"></i>
+                        Sværhedsgrad 1/5
+                    </div>
+                </div>
+                <h4 class="cardtitel"> Misosuppe med tofu</h4>
+                <i class="fa-solid fa-circle-info"> </i>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="filterDiv Vegansk card">
+                <img src="../assets/mad_6.png" class="billede" alt="Billede af madret">
+                <div class="pris">
+                    50 kr.
+                </div>
+
+                <div class="info__wrapper">
+                    <div class="tekstbokse tektsboks1">
+                        <i class="fa-sharp fa-regular fa-clock"></i>
+                        30-40 min
+                    </div>
+
+                    <div class="tekstbokse">
+                        <i class="fa-brands fa-cloudscale"></i>
+                        Sværhedsgrad 4/5
+                    </div>
+                </div>
+                <h4 class="cardtitel"> Spicy nudelsuppe</h4>
+                <i class="fa-solid fa-circle-info"> </i>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+        </div>
+
+        <!--------Proteinrig --------->
+        <div class="cards">
+            <div class="filterDiv Proteinrig card">
+                <img src="../assets/mad_6.png" class="billede" alt="Billede af madret">
+                <div class="pris">
+                    50 kr.
+                </div>
+
+                <div class="info__wrapper">
+                    <div class="tekstbokse tektsboks1">
+                        <i class="fa-sharp fa-regular fa-clock"></i>
+                        30-40 min
+                    </div>
+
+                    <div class="tekstbokse">
+                        <i class="fa-brands fa-cloudscale"></i>
+                        Sværhedsgrad 4/5
+                    </div>
+                </div>
+                <h4 class="cardtitel"> Spicy nudelsuppe</h4>
+                <i class="fa-solid fa-circle-info"> </i>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+        </div>
+
+
+        <div class="cards">
+            <div class="filterDiv Vegansk card">
+                <img src="../assets/mad_5.png" class="billede" alt="Billede af madret">
+                <div class="pris">
+                    55 kr.
+                </div>
+
+                <div class="info__wrapper">
+                    <div class="tekstbokse tektsboks1">
+                        <i class="fa-sharp fa-regular fa-clock"></i>
+                        20-30 min
+                    </div>
+
+                    <div class="tekstbokse">
+                        <i class="fa-brands fa-cloudscale"></i>
+                        Sværhedsgrad 2/5
+                    </div>
+                </div>
+                <h4 class="cardtitel"> Ramen med spicy rejer</h4>
+                <i class="fa-solid fa-circle-info"> </i>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+        </div>
+
+
+
+        <div class="cards">
+            <div class="filterDiv Proteinrig card">
+                <img src="../assets/mad_2.png" class="billede" alt="Billede af madret">
+                <div class="pris">
+                    57 kr.
+                </div>
+
+                <div class="info__wrapper">
+                    <div class="tekstbokse tektsboks1">
+                        <i class="fa-sharp fa-regular fa-clock"></i>
+                        10-20 min
+                    </div>
+
+                    <div class="tekstbokse">
+                        <i class="fa-brands fa-cloudscale"></i>
+                        Sværhedsgrad 1/5
+                    </div>
+                </div>
+                <h4 class="cardtitel"> Misosuppe med tofu</h4>
+                <i class="fa-solid fa-circle-info"> </i>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+        </div>
+
+
+        <div class="cards">
+            <div class="filterDiv Vegansk card">
+                <img src="../assets/mad_4.png" class="billede" alt="Billede af madret">
+                <div class="pris">
+                    34 kr.
+                </div>
+
+                <div class="info__wrapper">
+                    <div class="tekstbokse tektsboks1">
+                        <i class="fa-sharp fa-regular fa-clock"></i>
+                        20-30 min
+                    </div>
+
+                    <div class="tekstbokse">
+                        <i class="fa-brands fa-cloudscale"></i>
+                        Sværhedsgrad 2/5
+                    </div>
+                </div>
+                <h4 class="cardtitel"> Maki sushi med avokado</h4>
+                <i class="fa-solid fa-circle-info"> </i>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="filterDiv Vegansk card">
+                <img src="../assets/mad_3.png" class="billede" alt="Billede af madret">
+                <div class="pris">
+                    52 kr.
+                </div>
+
+                <div class="info__wrapper">
+                    <div class="tekstbokse tektsboks1">
+                        <i class="fa-sharp fa-regular fa-clock"></i>
+                        25-30 min
+                    </div>
+
+                    <div class="tekstbokse">
+                        <i class="fa-brands fa-cloudscale"></i>
+                        Sværhedsgrad 3/5
+                    </div>
+                </div>
+                <h4 class="cardtitel"> Stegt okse og nudler</h4>
+                <i class="fa-solid fa-circle-info"> </i>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="filterDiv Vegansk card">
+                <img src="../assets/mad_8.png" class="billede" alt="Billede af madret">
+                <div class="pris">
+                    48 kr.
+                </div>
+
+                <div class="info__wrapper">
+                    <div class="tekstbokse tektsboks1">
+                        <i class="fa-sharp fa-regular fa-clock"></i>
+                        30-40 min
+                    </div>
+
+                    <div class="tekstbokse">
+                        <i class="fa-brands fa-cloudscale"></i>
+                        Sværhedsgrad 3/5
+                    </div>
+                </div>
+                <h4 class="cardtitel"> Sesamkylling i tomat</h4>
+                <i class="fa-solid fa-circle-info"> </i>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="filterDiv Vegansk card">
+                <img src="../assets/mad_7.png" class="billede" alt="Billede af madret">
+                <div class="pris">
+                    40 kr.
+                </div>
+
+                <div class="info__wrapper">
+                    <div class="tekstbokse tektsboks1">
+                        <i class="fa-sharp fa-regular fa-clock"></i>
+                        20-30 min
+                    </div>
+
+                    <div class="tekstbokse">
+                        <i class="fa-brands fa-cloudscale"></i>
+                        Sværhedsgrad 2/5
+                    </div>
+                </div>
+                <h4 class="cardtitel"> Stegt kylling og grønt</h4>
+                <i class="fa-solid fa-circle-info"> </i>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+        </div>
+
+        <!--------økologisk --------->
+        <div class="cards">
+            <div class="filterDiv Oekologisk card">
+                <img src="../assets/mad_3.png" class="billede" alt="Billede af madret">
+                <div class="pris">
+                    52 kr.
+                </div>
+
+                <div class="info__wrapper">
+                    <div class="tekstbokse tektsboks1">
+                        <i class="fa-sharp fa-regular fa-clock"></i>
+                        25-30 min
+                    </div>
+
+                    <div class="tekstbokse">
+                        <i class="fa-brands fa-cloudscale"></i>
+                        Sværhedsgrad 3/5
+                    </div>
+                </div>
+                <h4 class="cardtitel"> Stegt okse og nudler</h4>
+                <i class="fa-solid fa-circle-info"> </i>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+        </div>
+
+
+        <div class="cards">
+            <div class="filterDiv Vegansk card">
+                <img src="../assets/mad_6.png" class="billede" alt="Billede af madret">
+                <div class="pris">
+                    50 kr.
+                </div>
+
+                <div class="info__wrapper">
+                    <div class="tekstbokse tektsboks1">
+                        <i class="fa-sharp fa-regular fa-clock"></i>
+                        30-40 min
+                    </div>
+
+                    <div class="tekstbokse">
+                        <i class="fa-brands fa-cloudscale"></i>
+                        Sværhedsgrad 4/5
+                    </div>
+                </div>
+                <h4 class="cardtitel"> Spicy nudelsuppe</h4>
+                <i class="fa-solid fa-circle-info"> </i>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+        </div>
+
+
+        <div class="cards">
+            <div class="filterDiv Oekologisk card">
+                <img src="../assets/mad_4.png" class="billede" alt="Billede af madret">
+                <div class="pris">
+                    34 kr.
+                </div>
+
+                <div class="info__wrapper">
+                    <div class="tekstbokse tektsboks1">
+                        <i class="fa-sharp fa-regular fa-clock"></i>
+                        20-30 min
+                    </div>
+
+                    <div class="tekstbokse">
+                        <i class="fa-brands fa-cloudscale"></i>
+                        Sværhedsgrad 2/5
+                    </div>
+                </div>
+                <h4 class="cardtitel"> Maki sushi med avokado</h4>
+                <i class="fa-solid fa-circle-info"> </i>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+        </div>
+
+
+        <div class="cards">
+            <div class="filterDiv Oekologisk card">
+                <img src="../assets/mad_5.png" class="billede" alt="Billede af madret">
+                <div class="pris">
+                    55 kr.
+                </div>
+
+                <div class="info__wrapper">
+                    <div class="tekstbokse tektsboks1">
+                        <i class="fa-sharp fa-regular fa-clock"></i>
+                        20-30 min
+                    </div>
+
+                    <div class="tekstbokse">
+                        <i class="fa-brands fa-cloudscale"></i>
+                        Sværhedsgrad 2/5
+                    </div>
+                </div>
+                <h4 class="cardtitel"> Ramen med spicy rejer</h4>
+                <i class="fa-solid fa-circle-info"> </i>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="filterDiv Oekologisk card">
+                <img src="../assets/mad_2.png" class="billede" alt="Billede af madret">
+                <div class="pris">
+                    57 kr.
+                </div>
+
+                <div class="info__wrapper">
+                    <div class="tekstbokse tektsboks1">
+                        <i class="fa-sharp fa-regular fa-clock"></i>
+                        10-20 min
+                    </div>
+
+                    <div class="tekstbokse">
+                        <i class="fa-brands fa-cloudscale"></i>
+                        Sværhedsgrad 1/5
+                    </div>
+                </div>
+                <h4 class="cardtitel"> Misosuppe med tofu</h4>
+                <i class="fa-solid fa-circle-info"> </i>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+        </div>
+
+        <!--------Børnevenlig --------->
+
+        <div class="cards">
+            <div class="filterDiv Boernevenlig card">
+                <img src="../assets/mad_2.png" class="billede" alt="Billede af madret">
+                <div class="pris">
+                    57 kr.
+                </div>
+
+                <div class="info__wrapper">
+                    <div class="tekstbokse tektsboks1">
+                        <i class="fa-sharp fa-regular fa-clock"></i>
+                        10-20 min
+                    </div>
+
+                    <div class="tekstbokse">
+                        <i class="fa-brands fa-cloudscale"></i>
+                        Sværhedsgrad 1/5
+                    </div>
+                </div>
+                <h4 class="cardtitel"> Misosuppe med tofu</h4>
+                <i class="fa-solid fa-circle-info"> </i>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="filterDiv Boernevenlig card">
+                <img src="../assets/mad_3.png" class="billede" alt="Billede af madret">
+                <div class="pris">
+                    52 kr.
+                </div>
+
+                <div class="info__wrapper">
+                    <div class="tekstbokse tektsboks1">
+                        <i class="fa-sharp fa-regular fa-clock"></i>
+                        25-30 min
+                    </div>
+
+                    <div class="tekstbokse">
+                        <i class="fa-brands fa-cloudscale"></i>
+                        Sværhedsgrad 3/5
+                    </div>
+                </div>
+                <h4 class="cardtitel"> Stegt okse og nudler</h4>
+                <i class="fa-solid fa-circle-info"> </i>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="filterDiv Boernevenlig card">
+                <img src="../assets/mad_4.png" class="billede" alt="Billede af madret">
+                <div class="pris">
+                    34 kr.
+                </div>
+
+                <div class="info__wrapper">
+                    <div class="tekstbokse tektsboks1">
+                        <i class="fa-sharp fa-regular fa-clock"></i>
+                        20-30 min
+                    </div>
+
+                    <div class="tekstbokse">
+                        <i class="fa-brands fa-cloudscale"></i>
+                        Sværhedsgrad 2/5
+                    </div>
+                </div>
+                <h4 class="cardtitel"> Maki sushi med avokado</h4>
+                <i class="fa-solid fa-circle-info"> </i>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="filterDiv Boernevenlig card">
+                <img src="../assets/mad_7.png" class="billede" alt="Billede af madret">
+                <div class="pris">
+                    40 kr.
+                </div>
+
+                <div class="info__wrapper">
+                    <div class="tekstbokse tektsboks1">
+                        <i class="fa-sharp fa-regular fa-clock"></i>
+                        20-30 min
+                    </div>
+
+                    <div class="tekstbokse">
+                        <i class="fa-brands fa-cloudscale"></i>
+                        Sværhedsgrad 2/5
+                    </div>
+                </div>
+                <h4 class="cardtitel"> Stegt kylling og grønt</h4>
+                <i class="fa-solid fa-circle-info"> </i>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="filterDiv Vegansk card">
+                <img src="../assets/mad_8.png" class="billede" alt="Billede af madret">
+                <div class="pris">
+                    48 kr.
+                </div>
+
+                <div class="info__wrapper">
+                    <div class="tekstbokse tektsboks1">
+                        <i class="fa-sharp fa-regular fa-clock"></i>
+                        30-40 min
+                    </div>
+
+                    <div class="tekstbokse">
+                        <i class="fa-brands fa-cloudscale"></i>
+                        Sværhedsgrad 3/5
+                    </div>
+                </div>
+                <h4 class="cardtitel"> Sesamkylling i tomat</h4>
+                <i class="fa-solid fa-circle-info"> </i>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,222 @@
+/* Basic reset */
+:after:before {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+/*-----------------------------------------------------------------------
+FARVER - hentes med: var(--navn)
+-----------------------------------------------------------------------*/
+:root {
+  --gron: #6da653;
+  --lyserod: #e1cdd3;
+  --rod: #b30000;
+  --hvid: #f2f2f2;
+  --sort: #2e2e2e;
+}
+
+/*-----------------------------------------------------------------------
+BODY
+-----------------------------------------------------------------------*/
+.body_forside {
+  font-family: Montserrat, sans-serif;
+  max-width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: var(--sort);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Montserrat, sans-serif;
+}
+
+/*-----------------------------------------------------------------------
+HEADER
+-----------------------------------------------------------------------*/
+.nav_forside {
+  background-color: var(--sort);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 15px 7%;
+}
+
+.nav_ikoner {
+  display: flex;
+  flex-direction: row;
+}
+
+.fa-solid {
+  color: var(--hvid);
+  font-size: 1.8rem;
+  padding-top: 12px;
+}
+
+.fa-circle-user {
+  padding-right: 15px;
+}
+
+.logo {
+  height: 3.5rem;
+}
+
+.banner_img {
+  width: 100%;
+}
+
+/*-----------------------------------------------------------------------
+BURGERMENU
+-----------------------------------------------------------------------*/
+.menu {
+  position: absolute;
+  top: 0;
+  background-color: var(--hvid);
+  /* 100 % view height */
+  height: 100vh;
+  /* 80 % view width */
+  width: 80vw;
+  transform: translateX(-100%);
+  transition: all 300ms ease-in-out;
+}
+
+.closeButton {
+  color: var(--sort);
+  padding-left: 33px;
+  padding-top: 27px;
+  font-size: 2rem;
+}
+
+/* SkÃ¦rmen bagved bliver mÃ¸rk, nÃ¥r menuen Ã¥bnes */
+.backdrop {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--sort);
+  opacity: 0.6;
+  visibility: hidden;
+  transition: all 300ms ease-in-out;
+}
+
+.menu_overkat {
+  font-size: 1.2rem;
+  padding-left: 33px;
+  margin-top: 30px;
+}
+
+.menu_underkat {
+  font-size: 1.2rem;
+  padding-left: 75px;
+}
+
+.menu_link {
+  color: var(--sort);
+  text-decoration: none;
+}
+
+.some_link {
+  color: var(--sort);
+  font-size: 2.5rem;
+}
+
+.menu_some {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+}
+
+hr {
+  border: 1px solid #aaaaaa;
+  width: 80%;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+/*-----------------------------------------------------------------------
+KNAPPER SECTION
+-----------------------------------------------------------------------*/
+.section_knapper {
+  padding-left: 5%;
+  padding-right: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.button_forside {
+  display: inline-block;
+  width: 100%;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-size: 1.2rem;
+}
+
+.button_lavdinegen {
+  background-color: var(--lyserod);
+  color: var(--sort);
+}
+
+.button_sevores {
+  background-color: var(--rod);
+  color: var(--hvid);
+}
+
+.p_eller {
+  color: var(--hvid);
+  font-size: 1.1rem;
+}
+
+/*-----------------------------------------------------------------------
+STUDIERABAT SECTION
+-----------------------------------------------------------------------*/
+#section_rabat {
+  margin-top: 30px;
+  background-image: url("../assets/procent.png");
+  background-size: 150px;
+  background-repeat: no-repeat;
+  padding-top: 70px;
+  padding-bottom: 60px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.p_rabat {
+  color: var(--hvid);
+  font-size: 22px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+/*-----------------------------------------------------------------------
+TRUSTPILOT
+-----------------------------------------------------------------------*/
+.section_trustpilot {
+  padding-left: 15%;
+  padding-right: 15%;
+  margin-bottom: 60px;
+}
+
+.trustpilot_img {
+  width: 100%;
+}
